@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ffuf/ffuf/pkg/ffuf"
+	"github.com/michael1026/ffuf/pkg/ffuf"
 )
 
 type WordlistInput struct {

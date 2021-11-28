@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ffuf/ffuf/pkg/ffuf"
-	"github.com/ffuf/ffuf/pkg/filter"
+	"github.com/michael1026/ffuf/pkg/ffuf"
+	"github.com/michael1026/ffuf/pkg/filter"
 )
 
 type interactive struct {

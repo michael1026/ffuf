@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ffuf/ffuf/pkg/ffuf"
+	"github.com/michael1026/ffuf/pkg/ffuf"
 )
 
 func TestNewTimeFilter(t *testing.T) {
