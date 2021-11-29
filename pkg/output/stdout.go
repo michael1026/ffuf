@@ -374,21 +374,21 @@ func (s *Stdoutput) PrintResult(res ffuf.Result) {
 func (s *Stdoutput) prepareInputsOneLine(res ffuf.Result) string {
 	inputs := ""
 	if len(res.Input) > 1 {
-		for k, v := range res.Input {
+		for k, _ := range res.Input {
 			if inSlice(k, s.config.CommandKeywords) {
 				// If we're using external command for input, display the position instead of input
-				inputs = fmt.Sprintf("%s%s : %s ", inputs, k, strconv.Itoa(res.Position))
+				inputs = fmt.Sprintf("%s", inputs)
 			} else {
-				inputs = fmt.Sprintf("%s%s : %s ", inputs, k, v)
+				inputs = fmt.Sprintf("%s", inputs)
 			}
 		}
 	} else {
-		for k, v := range res.Input {
+		for k, _ := range res.Input {
 			if inSlice(k, s.config.CommandKeywords) {
 				// If we're using external command for input, display the position instead of input
 				inputs = strconv.Itoa(res.Position)
 			} else {
-				inputs = res.Url + string(v)
+				inputs = res.Url
 			}
 		}
 	}
